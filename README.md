@@ -23,4 +23,4 @@ This game is written in a client-server model. There are a few design patterns u
      Client is written in JavaFX. There is simple graphical interface, very goodlooking interface was not the main purpose of the project. Client imports files from model package and whole board is generated from the same board representation as in the first paragraph. 
      
      
-     ![](https://preview.ibb.co/i9jL38/cc.png)
+     ![](https://preview.ibb.co/dtwBAo/cc.png)
