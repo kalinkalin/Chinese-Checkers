@@ -1,4 +1,3 @@
-method 
 ## Chinese Checkers
 
 Chinese Checkers, so called Trylma, is a classic strategy board game which can be played by two, three, four or six people at once. The game takes place on the hexagram board. Objective is to get all your marbles into oposite corner. More info [here](https://en.wikipedia.org/wiki/Chinese_checkers).
@@ -19,5 +18,9 @@ This game is written in a client-server model. There are a few design patterns u
     
    * ### Server
      Server is written using sockets. There is main server socket which is waiting for clients to connect. For each connected client there is separate thread(`Player` class), responsible for getting input and sending output to a given client socket. **Here I used Mediator and Observer design patterns** allow different clients to comunicate with each other and to flow messages both ways beetween server and clients. `DefaultGameRoom` is a mediator class which have an array of all clients threads and method which is parsing input from given thread and executing sepcified behavior and then sending proper messeges to some threads. `Player` is an observer class which contains client socket and waits for some IO on it, and if given socket is sending message it is transffered to a mediator parser-class. Observer has also method to asynchronously send message to a client from a mediator.
+    
+   * ### Client
+     Client is written in JavaFX. There is simple graphical interface, very goodlooking interface was not the main purpose of the project. Client imports files from model package and whole board is generated from the same board representation as in the first paragraph. 
      
-     All server classes are in server package.
+     
+     ![](https://preview.ibb.co/i9jL38/cc.png)
