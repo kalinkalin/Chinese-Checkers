@@ -1,4 +1,4 @@
-re ## Chinese Checkers
+## Chinese Checkers
 
 Chinese Checkers, so called Trylma, is a classic strategy board game which can be played by two, three, four or six people at once. The objective is to be first to race all of one's pieces across the hexagram-shaped board into "home"-the corner of the star opposite one's starting corner-using single-step moves or moves that jump over other pieces. 
 
