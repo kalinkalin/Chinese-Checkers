@@ -1,4 +1,4 @@
-## Chinese Checkers
+<a href="https://ibb.co/jf9WAo"><img src="https://preview.ibb.co/dtwBAo/cc.png" alt="cc" border="0"></a>## Chinese Checkers
 
 Chinese Checkers, so called Trylma, is a classic strategy board game which can be played by two, three, four or six people at once. The game takes place on the hexagram board. Objective is to get all your marbles into oposite corner. More info [here](https://en.wikipedia.org/wiki/Chinese_checkers).
 
