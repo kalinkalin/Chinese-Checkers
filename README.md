@@ -1,4 +1,4 @@
-
+***
 ## Chinese Checkers
 
 Chinese Checkers, so called Trylma, is a classic strategy board game which can be played by two, three, four or six people at once. The game takes place on the hexagram board. Objective is to get all your marbles into oposite corner. More info [here](https://en.wikipedia.org/wiki/Chinese_checkers).
@@ -12,9 +12,10 @@ This game is written in a client-server model. There are a few design patterns u
 
 
   * ### Board represantion
-    One of the primary goals was to make simple and easily usable representation of board and fields on it. Fields are expressed by two co-ordinates and current color. First coordinate is number of row and the second is order in given diagonal. All the fields are added to Array List, our board representation. **All of the classes representing rules and board are in `model` package**.
+    One of the primary goals was to make simple and easily usable representation of board and fields on it. Fields are expressed by two co-ordinates and current color. First coordinate is number of row and the second is order in given diagonal. All the fields are added to Array List, our board representation. **All of the classes representing rules and board are in** `model` **package**.
     
     The biggest issue here is generating different board for different number of players. **This is where Abstract Factory design pattern do the job**. There is abstract product - class `AbstractBoard`, which contains methods to generate center and all corner areas. This class is extended by concrete products - boards with given number of players, which contains concrete cases generating some corners in given colors by using inheritated methods. For all board types there is concrete Factory class, for example `FourPlayersBoardGenerator` which is responsible for initiating whole board, this classes are implementing `BoardGenerator` interface, so reffering by interface makes possible deciding which board to initiate in the run time.
     
     
-   * ### Server 
+   * ### Server
+     Server is written using sockets. There is main server socket which is waiting for clients to connect. For each connected client there is separate thread(`Player` class), responsible for getting input and sending output to a given client socket. **Here I used Mediator and Observer design patterns** allow different clients to comunicate with each other and to flow messages both ways beetween server and clients. `Player` class is an observer class which contains given client socket
